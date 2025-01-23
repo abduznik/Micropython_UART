@@ -7,19 +7,6 @@ uart =machine.UART(0, baudrate=115200)
 uart.init(115200,bits=8, parity=None, stop=1, timeout=3000)
 
 led = machine.Pin(25, machine.Pin.OUT)
-'''
-def set_gpio_from_data(data):
-    led.toggle()
-    for i,bit in enumerate(data):
-        print(i, bit)
-        
-        pins[i].value(int(bit))
-while True:
-    #uart.write("im stuck!")
-        data_received = sys.stdout.buffer.read()
-        
-        set_gpio_from_data(data_received)
-'''
 
 def check_input():
     while True:
